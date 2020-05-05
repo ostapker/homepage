@@ -1,0 +1,79 @@
+#wave {
+    color: rgb(238, 98, 98);
+    padding-top: calc((100% - 1127px) / 2);
+    height: 7em;
+    box-sizing: content-box;
+    background: currentColor;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  #wave svg {
+    display: block;
+    position: relative;
+    top: calc(7em - 1px);
+  }
+
+  /* Credits */
+  .credits {
+    text-align: right;
+    padding: 0.5em 0.75em;
+    line-height: 1em;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: white;
+    background: bisque;
+    border-radius: 15px;
+    transition: all 0.2s linear;
+  }
+  .credits:not(:hover) a {
+    color: indianred;
+  }
+  .credits:hover {
+    color:black;
+    background: white;
+  }
+
+  /* Tags */
+  [data-tag] > *:first-child:after {
+    font-size: 0.6em;
+    line-height: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0em 0.75em;
+    border-radius: 15px;
+    height: 1rem;
+    margin-left: 0.5em;
+    margin-top: -1px;
+    vertical-align: middle;
+    box-shadow: inset 0 0 0 1px;
+    opacity: 0.5;
+    transition: opacity 0.2s linear;
+  }
+  [data-tag]:hover > *:first-child:after {
+    color: #ffffff;
+    opacity: 1;
+    box-shadow: none;
+  }
+  [data-tag="movie"] > *:first-child:after { content: "movie"; }
+  /* [data-tag="hackathon"] > *:first-child:after { content: "hackathon"; }
+  [data-tag="jam"] > *:first-child:after { content: "jam"; } */
+  [data-tag="game"] > *:first-child:after { content: "game"; }
+  [data-tag="movie"]:hover > *:first-child:after { background: blue; }
+  /* [data-tag="hackathon"]:hover > *:first-child:after { background: midnightblue; }
+  [data-tag="jam"]:hover > *:first-child:after { background: deepskyblue; } */
+  [data-tag="game"]:hover > *:first-child:after { background: fuchsia; }
+
+  /* Highlighted list item */
+  ul:not(.timeline) > li.highlighted,
+  ul:not(.timeline) > li.bordered {
+    margin: 0.25em 0 0.25em -1.75em;
+    padding: 0.25em 0.5em 0.25em 1.75em;
+  }
+  ul:not(.timeline) > li.highlighted > div {
+    margin-bottom: 0.25em;
+}
